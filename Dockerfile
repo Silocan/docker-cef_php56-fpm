@@ -56,6 +56,8 @@ RUN docker-php-ext-configure mysql && \
     docker-php-ext-install calendar && \
     docker-php-ext-install bcmath
 
+COPY docker/php/php.ini /usr/local/etc/php/php.ini
+
 COPY docker/docker-entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
